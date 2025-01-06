@@ -1,0 +1,15 @@
+#carrito{
+    background-color: rgb(209, 207, 207);
+}
+
+img{
+    width: 75px;
+    height: 75px;
+}
+
+.card{
+    display: flex;
+    border: none;
+    box-shadow: none;
+    background-color: rgb(209, 207, 207);
+}
