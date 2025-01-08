@@ -28,8 +28,8 @@
                       </div>
                       <!--Precio y eliminar-->
                       <div>
-                        <p>$999.00</p>
-                        <a href="#"><i class="bi bi-x-lg"></i></a>
+                        <p id="precio">$999.00</p>
+                        <a href="#" id="eliminar"><i class="bi bi-x-lg"></i></a>
                       </div>
                     </div>
                   </div>
@@ -39,14 +39,14 @@
                         <img src="producto_2.jpg" alt="watch">
                       <!--Detalles del producto-->
                       <div>
-                        <h1 id="producto">Iphone 15</h1>
-                        <p id="color-producto">Golden</p>
+                        <h1 id="producto">Apple watch</h1>
+                        <p id="color-producto">Blue</p>
                         <p id="cantidad">x1</p>
                       </div>
                       <!--Precio y eliminar-->
                       <div>
-                        <p>$999.00</p>
-                        <a href="#"><i class="bi bi-x-lg"></i></a>
+                        <p id="precio">$399.00</p>
+                        <a href="#"><i class="bi bi-x-lg" id="eliminar"></i></a>
                       </div>
                     </div>
                   </div>
@@ -56,35 +56,48 @@
                         <img src="producto_3.jpg" alt="imac">
                       <!--Detalles del producto-->
                       <div>
-                        <h1 id="producto">Iphone 15</h1>
-                        <p id="color-producto">Golden</p>
+                        <h1 id="producto">iMac</h1>
+                        <p id="color-producto">Green</p>
                         <p id="cantidad">x1</p>
                       </div>
                       <!--Precio y eliminar-->
                       <div>
-                        <p>$999.00</p>
-                        <a href="#"><i class="bi bi-x-lg"></i></a>
+                        <p id="precio">$1199.00</p>
+                        <a href="#" id="eliminar"><i class="bi bi-x-lg"></i></a>
                       </div>
                     </div>
                   </div>
 
                   <hr>
+                  <br>
 
                   <form>
                     <div class="form-row align-items-center">
-                      <div class="col-sm-3 my-1">
-                        <label class="sr-only" for="inlineFormInputName">Name</label>
-                        <input type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
+                      <div class="col-sm-3 col-md-10">
+                        <input type="text" id="coupon-code" placeholder=""> <!--es importante dejar el placeholder aunque este vacio, para que luego la animacion con css quede bien y no baje cuando haya texto-->
+                        <label for="coupon-code">Enter coupon code</label>
                       </div>
-                      <div class="col-auto my-1">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                      <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">Apply coupon</button>
                       </div>
                     </div>
                   </form>
                   <br>
-                  <p>Sub total</p>
-                  <p>Tax</p>
-                  <p>Total</p>
+                  <div id="calculo-total">
+                    <div class="d-flex">
+                      <span>Sub total</span>
+                      <span class="ml-auto">$2597.00</span>
+                    </div>
+                    <div class="d-flex">
+                      <span>Tax</span>
+                      <span class="ml-auto">$623.28</span>
+                    </div>
+                    <div class="d-flex" id="total">
+                      <span>TOTAL</span>
+                      <span class="ml-auto">$3220.28</span>
+                    </div>
+                  </div>
+
             </div> <!-- cierre col 1-->
 
             <div class="col">
@@ -92,14 +105,14 @@
                 <p>Contact information</p>
                 <form>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">First and last name</label> <!--va a tener q ir abajo del input para usar css-->
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <input type="text" id="full-name" placeholder=""> <!--es importante dejar el placeholder aunque este vacio, para que luego la animacion con css quede bien y no baje cuando haya texto-->
+                      <label for="full-name">First and last name</label>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Email address</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <input type="email" id="email-address" placeholder=""> <!--es importante dejar el placeholder aunque este vacio, para que luego la animacion con css quede bien y no baje cuando haya texto-->
+                      <label for="email-address">Email address</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
                   </form>
             </div> <!-- cierre col 2-->
         </div> <!-- cierre row 1-->
