@@ -13,6 +13,7 @@
     <title>Shop checkout</title>
   </head>
   <body>
+    <!--Este ejemplo es solamente visual, los botones no tienen funcionalidad-->
     <div class="container-fluid">
         <div class="row">
             <div class="col" id="carrito">
@@ -73,12 +74,12 @@
 
                   <form>
                     <div class="form-row align-items-center">
-                      <div class="col-sm-3 col-md-10">
+                      <div class="col-sm-3 col-md-9">
                         <input type="text" id="coupon-code" placeholder=""> <!--es importante dejar el placeholder aunque este vacio, para que luego la animacion con css quede bien y no baje cuando haya texto-->
                         <label for="coupon-code">Enter coupon code</label>
                       </div>
                       <div class="col-auto">
-                        <button type="submit" class="btn btn-primary">Apply coupon</button>
+                        <button type="submit" class="btn btn-primary" id="coupon-button">Apply coupon</button>
                       </div>
                     </div>
                   </form>
@@ -102,8 +103,8 @@
 
             <div class="col">
                 <br>
-                <p>Contact information</p>
-                <form>
+                <h1>Contact information</h1>
+                <form id="contact">
                     <div class="form-group">
                       <input type="text" id="full-name" placeholder=""> <!--es importante dejar el placeholder aunque este vacio, para que luego la animacion con css quede bien y no baje cuando haya texto-->
                       <label for="full-name">First and last name</label>
@@ -112,7 +113,8 @@
                       <input type="email" id="email-address" placeholder=""> <!--es importante dejar el placeholder aunque este vacio, para que luego la animacion con css quede bien y no baje cuando haya texto-->
                       <label for="email-address">Email address</label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit-button">Continue</button>
                   </form>
             </div> <!-- cierre col 2-->
         </div> <!-- cierre row 1-->

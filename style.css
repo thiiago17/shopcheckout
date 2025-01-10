@@ -2,6 +2,7 @@
 
 #carrito{
     background-color: rgb(218, 217, 217);
+    min-height: 100vh;
 }
 
 .card{
@@ -14,11 +15,15 @@
 
 /* Labels e inputs */
 
+#contact, #full-name, #email-address{
+    margin-top: 50px;
+}
+
 label[for="full-name"]{
     position: absolute;
-    color: blue;  /* color de first and last name*/
+    color: rgb(78, 78, 78);;  /* color de first and last name*/
     left: 30px;
-    top: 70px;
+    top: 140px;
     background: white;
     padding: 0px 5px;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -29,53 +34,50 @@ input{
     width: 100%;
     padding: 0.375rem 0.75rem;
     border-radius: 5px;
-    border-color: blue;
+    border-color: rgb(78, 78, 78);
+    height: 60px;
 }
 
 input:focus{
-    border-color: blue;
+    border-color: rgb(78, 78, 78);
     outline: none;
     border-width: 2px;
-    box-shadow: 0 0 5px blue;
+    box-shadow: 0 0 5px rgb(78, 78, 78);
 }
 
 input:focus + label[for="full-name"],input:not(:placeholder-shown) + label[for="full-name"]{ /* si el placeholder no aparece es porque hay algo escrito, por lo tanto no vuelve a bajar */
-    transform: translateY(-23px);
-    color: blue;
+    transform: translateY(-32px);
+    color: black;
 }
 
 label[for="email-address"]{
     position: absolute;
-    color: blue;  /* color de first and last name*/
+    color: rgb(78, 78, 78);;  /* color de first and last name*/
     left: 30px;
-    top: 127px;
+    top: 250px;
     background: white;
     padding: 0px 5px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 input:focus + label[for="email-address"], input:not(:placeholder-shown) + label[for="email-address"]{ /* si el placeholder no aparece es porque hay algo escrito, por lo tanto no vuelve a bajar */
-    transform: translateY(-23px);
-    color: blue;
+    transform: translateY(-32px);
+    color: black;
 }
 
 label[for="coupon-code"]{
     position: absolute;
-    color: blue;  /* color de first and last name*/
+    color: rgb(78, 78, 78);  /* color de first and last name*/
     left: 20px;
     top: 17px;
-    background: transparent; /* chequear como hacerlo bien */
+    background: transparent; 
     padding: 0px 5px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 input:focus + label[for="coupon-code"], input:not(:placeholder-shown) + label[for="coupon-code"]{ /* si el placeholder no aparece es porque hay algo escrito, por lo tanto no vuelve a bajar */
     transform: translateY(-45px);
-    color: blue;
-}
-
-input[id="coupon-code"]{
-    height: 60px;
+    color: black;
 }
 
 button[type="submit"]{
@@ -88,6 +90,16 @@ button[type="submit"]:hover{
     background-color: rgb(66, 66, 66);
     color: white;
     border-color: black;
+}
+
+#coupon-button{
+    width: 200px;
+    height: 60px;
+    font-size: larger;
+}
+
+#submit-button{
+    height: 60px;
 }
 
 /* Lista de productos */
@@ -142,4 +154,26 @@ img{
 
 span{
     margin-bottom: 1%;
+}
+
+/* Correcciones para pantallas mas chicas */
+
+@media (min-width: 400px) and (max-width: 480px){
+    #precio{
+        margin-left: 55%;
+        margin-top: -100px;
+    }
+
+    #producto{
+        font-size: x-large;
+    }
+
+    #eliminar{
+        margin-top: 18px;
+    }
+
+    #coupon-button{
+        margin-top: 10px;
+        margin-left: 50%;
+    }
 }
